@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # Install dependencies
-RUN apk add --no-cache curl tar bash sqlite openssl ca-certificates opus-tools
+RUN apk add --no-cache curl tar bash sqlite openssl opus ca-certificates
 
 # Create the container user
 RUN adduser -D -h /home/container container

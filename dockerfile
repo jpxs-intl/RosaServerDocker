@@ -11,13 +11,13 @@ USER container
 ENV USER=container HOME=/home/container
 
 # Copy over entrypoint script
-COPY --chown=container:container ./entrypoint.sh /entrypoint.sh
+COPY ./entrypoint.sh /entrypoint.sh
 
 # Set the working directory
 WORKDIR /home/container
 
 # Copy over the files
-COPY --chown=container:container ./container/ /home/container/
+COPY --chown=container:container ./server/ /home/container/
 
 # Run the entrypoint script
 CMD ["/bin/bash", "/entrypoint.sh"]

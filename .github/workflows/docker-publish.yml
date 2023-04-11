@@ -38,6 +38,7 @@ jobs:
       # run the build script
       - shell: bash
         run: |
+          ls
           ./build 
 
       - name: Checkout repository

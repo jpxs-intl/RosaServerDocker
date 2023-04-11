@@ -13,7 +13,7 @@ ENV USER=container HOME=/home/container
 COPY ./entrypoint.sh /entrypoint.sh
 
 # Copy over the server build
-COPY --chown=container:container ./server.tar.gz /home/container/server.tar.gz
+ADD --chown=container:container ./server.tar.gz /home/container/server.tar.gz
 
 # Set User
 USER container

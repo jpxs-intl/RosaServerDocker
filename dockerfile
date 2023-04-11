@@ -12,8 +12,8 @@ ENV USER=container HOME=/home/container
 # Copy over entrypoint script
 COPY ./entrypoint.sh /entrypoint.sh
 
-# Copy over the files
-COPY --chown=container:container ./server/. /home/container/
+# Copy over the server build
+COPY --chown=container:container ./server.tar.gz /home/container/server.tar.gz
 
 # Set User
 USER container

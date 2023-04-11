@@ -34,6 +34,11 @@ jobs:
       id-token: write
 
     steps:
+
+      # run the build script
+      - name: Build
+        run: build 
+
       - name: Checkout repository
         uses: actions/checkout@v3
 

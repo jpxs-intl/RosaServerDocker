@@ -36,8 +36,9 @@ jobs:
     steps:
 
       # run the build script
-      - name: Build
-        run: build 
+      - shell: bash
+        run: |
+          ./build 
 
       - name: Checkout repository
         uses: actions/checkout@v3

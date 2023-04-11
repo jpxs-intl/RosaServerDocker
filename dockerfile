@@ -1,25 +1,10 @@
-FROM alpine:latest
+FROM ubuntu:latest
+RUN  /bin/sh -c "apt update && apt install opus-tools sqlite3 openssl ca-certificates -y && update-ca-certificates && useradd container -d /home/container -m"
 
-# Install dependencies
-RUN apk add --no-cache curl tar bash sqlite openssl opus ca-certificates
-
-# Create the container user
-RUN adduser -D -h /home/container container
-
-# Set some environment variables
-ENV USER=container HOME=/home/container
-
-# Copy over entrypoint script
-COPY ./entrypoint.sh /entrypoint.sh
-
-# Copy over the server build
-ADD --chown=container:container ./server.tar.gz /home/container/server.tar.gz
-
-# Set User
 USER container
+ENV USER=container HOME=/home/container
+ADD entrypoint.sh /entrypoint.sh
 
-# Set the working directory
 WORKDIR /home/container
 
-# Run the entrypoint script
 CMD ["/bin/bash", "/entrypoint.sh"]

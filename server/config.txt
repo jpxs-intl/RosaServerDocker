@@ -1,9 +1,0 @@
-port=27584
-servermaxbytespersecond=5000000
-servername=Sub Rosa Server
-adminpassword=CHANGEME
-serverpassword=
-gametype=4
-maxnumofplayers=64
-roundtime=11
-setcpuaffinity=1

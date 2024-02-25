@@ -1,4 +1,8 @@
 FROM ubuntu:latest
+
+LABEL maintainer="gart <gart@gart.sh>"
+LABEL TAG="ubuntu-wine"
+
 RUN dpkg --add-architecture i386
 RUN apt-get update -y
 RUN apt-get install software-properties-common -y

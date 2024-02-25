@@ -8,4 +8,4 @@ ADD entrypoint.sh /entrypoint.sh
 
 WORKDIR /home/container
 
-CMD ["/bin/bash", "/entrypoint.sh"]
+CMD ["/bin/sh", "/entrypoint.sh"]

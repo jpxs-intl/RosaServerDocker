@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:latest
 
 LABEL maintainer="gart <gart@gart.sh>"
 LABEL TAG="ubuntu"
